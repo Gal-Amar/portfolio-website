@@ -62,16 +62,38 @@ header {
   font-weight: 300;
   font-size: 1.4rem;
  }
+/* ==================== MEDIA QUERIS (MEDIUM DEVICES) ====================== */
 
+@media screen and (max-width:1024px){
+  header {
+    height: 68vh;
+  }
+
+}
 
 
  /* ==================== MEDIA QUERIS (SMALL DEVICES) ====================== */
 
- @media screen and (max-width: 600px) {
+ @media screen and (max-width:600px){
     header {
       height: 100vh;
     }
 
+    .me {
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .header_socials {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 1rem;
+      /* position: absolute; */
+      left: 1rem;
+      bottom: 0rem;
+      margin: 0.5rem;
+      justify-content: center;
+    }
     
     .scroll_down {
       display: none;
