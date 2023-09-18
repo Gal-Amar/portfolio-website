@@ -49,6 +49,18 @@
   margin: 2rem 0 1rem;
 }
 
+
+.btn.btn-disabled:hover {
+  background-color: transparent;
+  color: var(--bg-white);
+  cursor: not-allowed;
+}
+
+.btn.btn-primary-disabled:hover {
+  background-color: transparent;
+  color: var(--bg-white);
+  cursor: not-allowed;
+}
 /* ==================== MEDIA QUERIS (MEDIUM-LARGE DEVICES) ====================== */
 
 @media screen and (min-width: 600px) {

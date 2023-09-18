@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./portfolio.css"
 import IMG1 from '../../assets/DonkeyWebPic.jpeg'
 import IMG2 from '../../assets/Zerli.jpeg'
@@ -20,8 +20,8 @@ const data = [
     badge: 'Complete',
     title: 'Gal Amar Portfolio',
     description: 'Resume Website',
-    github: 'https://github.com',
-    demo: 'https://github.com',
+    github: 'https://github.com/Gal-Amar/portfolio-website',
+    demo: 'https://tinyurl.com/3kmmk99z',
   },
   {
     id: 3,
@@ -29,13 +29,15 @@ const data = [
     badge: 'In Progress',
     title: 'Donkey And Friends',
     description:'Coloring pages website',
-    github: 'https://github.com',
-    demo: 'https://github.com',
+    github: null,
+    demo: null,
   },
   
 ]
 
 const Portfolio = () => {
+  const {linkState, setLinkState } = useState('');
+
   return (
     <section id='portfolio'>
       <h4>My Recent Work</h4>
@@ -55,8 +57,8 @@ const Portfolio = () => {
                 <h3>{title}</h3>
                 <small>{description}</small>
                 <div className="portfolio_item-cta">
-                  <a href={github} className='btn' target="_blank">Github</a>
-                  <a href={demo} className='btn btn-primary' target="_blank">Live Demo</a>
+                  <a href={github} className={github === null ? 'btn btn-disabled' : 'btn' } target="_blank"  >Github</a>
+                  <a href={demo} className={demo === null ? 'btn btn-primary-disabled' : 'btn btn-primary' } target="_blank" disabled ={demo === 'none' ? true : false }>Live Demo</a>
                 </div>
               </article>
             )
