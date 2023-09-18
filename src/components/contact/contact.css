@@ -35,6 +35,10 @@
   font-size: 0.8rem;
 }
 
+.message {
+  color: var(--color-primary);
+}
+
 /* ============== FORM ================ */
 
 form {
@@ -51,6 +55,7 @@ input, textarea {
   border: 2px solid var(--color-primary-variant);
   resize: none;
   color: var(--color-white);
+  font-family: 'Poppins', sans-serif;
 }
 
 input::placeholder {

@@ -32,7 +32,7 @@ const About = () => {
             <article className='about_card'>
               <RiFoldersFill className='about_icon' />
               <h4>Projects</h4>
-              <small>2 completed, 2 on Process</small>
+              <small>2 Completed, 2 in Progress</small>
             </article>
           </div>
 

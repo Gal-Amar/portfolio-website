@@ -1,24 +1,47 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import "./contact.css"
 import { MdEmail } from 'react-icons/md'
 import { FaFacebookSquare } from 'react-icons/fa'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import emailjs from 'emailjs-com'
 
+
+
 const Contact = () => {
   const form = useRef();
+  const [message, setMessage] = useState('');
+  const [inputText, setInputText] = useState('');
 
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm('service_x3qh7jc', 'template_z3h5v0g', form.current, 'lLmZJZwxejhPt3Q29')
       .then((result) => {
-        console.log(result.text);
+        setMessage('Email sent successfully!');
+        setTimeout(() => {
+          setMessage('');
+        }, 3000);
     }, (error) => {
+        setMessage('Error sending email. Please try again later.');
+        setTimeout(() => {
+          setMessage('');
+        }, 3000);
         console.log(error.text);
     });
 
     e.target.reset()
+    setInputText('')
+    e.target.message.value = inputText;
   };
+
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value;
+    const capitalizedValue = capitalizeFirstLetter(inputValue);
+    setInputText(capitalizedValue);
+  };
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
   return (
     <section id='contact'>
@@ -48,12 +71,12 @@ const Contact = () => {
         </div>
         {/* END OF CONTACT OPTION */}
         <form ref={form} onSubmit={sendEmail}>
-          <input type='text' name='name' placeholder='Your Full Name' required />
-          <input type='email' name='email' placeholder='Your Email' required />
-          <textarea name='message' rows={7} placeholder='Your Message' required></textarea>
+          <input type='text' name='name' placeholder='Your Full Name'  required />
+          <input type='email' name='email' placeholder='Your Email'  required />
+          <textarea name='message' rows={7} placeholder='Your Message' onChange={handleInputChange} value={inputText} required></textarea>
           <button type='submit' className='btn btn-primary'>Send Messge</button>
+          {message && <div className="message">{message}</div>}
         </form>
-
       </div>
     </section>
   )
