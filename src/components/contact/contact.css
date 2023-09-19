@@ -39,6 +39,10 @@
   color: var(--color-primary);
 }
 
+.contact_container button {
+  width: 100%;
+}
+
 /* ============== FORM ================ */
 
 form {
@@ -85,4 +89,5 @@ textarea::placeholder {
   .container.contact_container {
     width: var(--containter-width-sm);
   }
+
 }
