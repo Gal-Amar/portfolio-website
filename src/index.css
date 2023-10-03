@@ -40,7 +40,6 @@ html {
 
 
 body {
-  /* font-family: 'Fredoka', sans-serif; */
   font-family: 'Poppins', sans-serif;
   background: var(--color-bg-variant);
   color:var(--color-white);

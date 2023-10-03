@@ -62,14 +62,7 @@ header {
   font-weight: 300;
   font-size: 1.4rem;
  }
-/* ==================== MEDIA QUERIS (MEDIUM DEVICES) ====================== */
-/* 
-@media screen and (max-width:1024px){
-  header {
-    height: 68vh;
-  }
 
-} */
  /* ==================== MEDIA QUERIS (SMALL DEVICES) ====================== */
 
  @media screen and (max-width:600px){

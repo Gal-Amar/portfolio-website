@@ -9,7 +9,6 @@ import { useState } from 'react'
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState('#')
-  // const section = document.getElementById(id);
 
   return (
     <nav>

@@ -29,14 +29,14 @@ const data = [
     badge: 'In Progress',
     title: 'Donkey And Friends',
     description:'Coloring pages website',
-    github: null,
+    github: 'https://github.com/Gal-Amar/donkey-website',
     demo: null,
   },
   
 ]
 
 const Portfolio = () => {
-  const {linkState, setLinkState } = useState('');
+  
 
   return (
     <section id='portfolio'>
