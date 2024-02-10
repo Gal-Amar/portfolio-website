@@ -41,18 +41,17 @@ const About = () => {
       </div>
       <div className="container about_me_p">
         <p>
-        I'm Gal Amar, a fourth-year software engineering student at Braude College, 
-        eager to begin my career as a software developer. My journey began with training 
-        as a phone technician at John Bryce Instruction, followed by two fulfilling years 
-        in security work at Israel Railways. During my time as a Security Guard and Baggage 
-        Screener, I sharpened my sense of responsibility and attention to detail.
+        I'm Gal Amar, a junior software engeneer and I'm excited to begin my career as a
+        software developer. My journey began with working as a phone technician at John Bryce
+        followed by two years in security work at Israel Railways. 
+        During my time as a Security Guard and Baggage Screener, I sharpened my sense of
+        responsibility and attention to detail.
         </p>
         <p>
-        Outside of work and studies, I'm passionate about group sports, TV series, and spending
-        quality time with friends. Now, my primary focus is on transitioning into software 
-        engineering, where I can apply my strong foundation in Java, C, and web development. 
-        I thrive in collaborative environments, enjoy helping colleagues, and excel in self-motivated
-        learning and accountability. 
+        Beyond work and studies, I'm passionate about sports, TV series, and enjoying quality time
+        with friends. Currently, my main goal is transitioning into software engineering, leveraging
+        my solid skills in Java, C, and web development. I work well in team, love assisting colleagues,
+        and excel in self-driven learning and accountability
         </p>
         <a href='#contact' className='btn btn-primary'>Let's Talk</a>
       </div>
