@@ -4,6 +4,7 @@ import ME from '../../assets/myPic2.JPEG'
 import { FaAward } from 'react-icons/fa'
 import { BiBadgeCheck } from 'react-icons/bi'
 import { RiFoldersFill } from 'react-icons/ri'
+
 const About = () => {
   return (
     <section id='about'>

@@ -1,7 +1,11 @@
 .about_container {
   display: grid;
-  grid-template-columns: 30% 55%;
-  gap: 15%;
+  grid-template-columns: 30% 60%;
+  gap: 10%;
+  align-items: center;
+}
+.about_content {
+  align-content: center;
 }
 .container.about_me_p {
   padding: 1rem;
@@ -143,5 +147,5 @@
     width: 100%;
     text-align: center;
   }
-
+  
 }

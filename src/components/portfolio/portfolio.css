@@ -1,16 +1,22 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 .portfolio_container {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 1rem;
+  gap: 0.8rem;
+  justify-content: center;
 }
 
 .portfolio_item {
+  display: grid;
+  grid-template-rows: 2fr 2.8rem;
   background: var(--color-bg-variant);
-  padding: 1rem;
+  /* padding: 1rem; */
   border-radius: 2rem;
   border: 1px solid transparent;
   transition: var(--transition);
+}
+.portfolio-item-top{
+  padding: 1rem;
 }
 
 .portfolio_item:hover {
@@ -46,7 +52,34 @@
 .portfolio_item-cta {
   display: flex;
   gap: 1rem;
-  margin: 2rem 0 1rem;
+  margin: 2rem 0 1rem;  
+}
+
+.process {
+  border-top: 1px solid var(--color-bg);
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+.process:hover {
+  background-color: var(--color-bg-variant);
+  border: transparent;
+  border-end-end-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  transition: var(--transition);
+}
+.process-btn {
+  color:  var(--color-bg);
+  background-color: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: medium;
+  
+}
+.process-btn-icon {
+ display: grid;
+ justify-content: center; 
 }
 
 
@@ -61,34 +94,199 @@
   color: var(--bg-white);
   cursor: not-allowed;
 }
+
+.work-process-section {
+  margin-top:2rem ;
+
+}
+/* ==================== WORK PROCESS ====================== */
+
+.process_container {
+  display: grid;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 2px solid var(--color-bg-variant);
+  text-wrap: wrap;
+  /* height: fit-content; */
+ 
+  
+}
+.process-headline {
+  display: grid;
+  justify-content: center;
+  color: var(--color-primary);
+  
+}
+
+.process-content-section-one {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  gap: 2rem;
+  justify-content: center;
+
+}
+.process-content-section-two {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 2rem;
+ justify-content: center;
+
+}
+.project-logo {
+  position: relative;
+  text-align: center;
+  /* width: 13rem; */
+}
+
+.logo-description {
+  position: absolute;
+  bottom: -3rem;
+  left: 25%;
+  font-weight: 500;
+  color: #7b415f;
+  border-radius: 2rem;
+  padding:0.5rem ;
+  border: 1px solid #7b415f;
+  background-color: #eee5e9  ;
+}
+
+
+.section-one-des
+{
+  /* width: 35rem; */
+  margin: 2rem 0 0 3rem;
+  display: grid;
+  justify-content: center;
+}
+
+.section-two-des  {
+  /* width: 30rem; */
+  margin: 2rem 0 0 3rem;
+  display: grid;
+  justify-content: center;
+}
+
+
+/* .process-content-section-two div {
+  display: grid;
+  justify-content: center;
+} */
+.project-image {
+  width: 20rem;
+  margin-top: 1rem;
+  transform: rotate(1.5deg);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+}
+
+.zerli-logo{
+  width: 12rem;
+}
+
+
+.project-video {
+  display: grid;
+  justify-content: center;
+}
+
+.first-video{
+  margin-top:2rem ;
+  width: 25rem;
+  border-radius: 1rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.second-video{ 
+  width: 25rem;
+  border-radius: 1rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
 /* ==================== MEDIA QUERIS (MEDIUM-LARGE DEVICES) ====================== */
 
 @media screen and (min-width: 600px) {
   .portfolio_item-image img{
     height: 175px;
   }
+ 
+}
+
+/* ==================== MEDIA QUERIS (LARGE DEVICES) ====================== */
+
+@media screen and (min-width: 2040px) {
+  .process_container { 
+    width: max-content;
+    justify-content: normal;
+    padding:0 0 0 10rem;
+   
+  }
+  .section-one-des,.section-two-des {
+    width: 40rem;
+    
+  }
+
 }
 /* ==================== MEDIA QUERIS (MEDIUM DEVICES) ====================== */
 
 @media screen and (max-width: 1024px) {
+
+
   .portfolio_container {
     grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
+    gap: 1rem;
+    max-width: min-content;
+   
+  }
+  /* .process_container {
+    margin: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+  } */
+  .process-content-section-one {
+    grid-template-columns: 1fr;
+    width: fit-content;
+  }
+  .process-content-section-two {
+    grid-template-columns: 1fr;
+    width: fit-content;
+
+  }
+
+  .section-two-des,.section-one-des, .first-video, .second-video  {
+    margin: 1.5rem 0;
+    width: 100%;
+    text-align: center;
+
+  }
+ 
+  .project-image {
+    display: none;
   }
 }
+
 
 /* ==================== MEDIA QUERIS (SMALL DEVICES) ====================== */
 
 @media screen and (max-width: 600px) {
-  
+/*   
   .contiainer.portfolio_container {
-    max-width: 100px;
-  }
+    max-width: 90px;
+  } */
 
   .portfolio_container {
     grid-template-columns: 1fr;
     gap: 1rem;
- 
+    
   }
+ 
+  
+  /* .first-video, .second-video {
+    margin: 1.5rem 0;
+    width: 100%;
+    text-align: center;
+  } */
+
+
 
 }

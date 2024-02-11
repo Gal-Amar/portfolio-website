@@ -1,8 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import "./portfolio.css"
+import { IoIosArrowDown } from "react-icons/io";
 import IMG1 from '../../assets/DonkeyWebPic.jpeg'
 import IMG2 from '../../assets/Zerli.jpeg'
 import IMG3 from '../../assets/PortfolioWebPic.jpeg'
+import ZerliWorkProcess from './ZerliWorkProcess'
+import DonkeyWorkProcess from './DonkeyWorkProcess';
 
 const data = [
   {
@@ -16,7 +19,7 @@ const data = [
   },
   {
     id: 2,
-       image: IMG3,
+    image: IMG3,
     badge: 'Complete',
     title: 'Gal Amar Portfolio',
     description: 'Resume Website',
@@ -28,15 +31,33 @@ const data = [
     image: IMG1,
     badge: 'In Progress',
     title: 'Donkey And Friends',
-    description:'Coloring pages website',
+    description: 'Coloring pages website',
     github: 'https://github.com/Gal-Amar/donkey-website',
     demo: null,
   },
-  
+
 ]
 
+
+const ProcessHandler = (props) => {
+  console.log(props.id);
+  switch (props.id) {
+    case 1: return < ZerliWorkProcess />;
+    case 2:
+
+    case 3:
+      return <DonkeyWorkProcess />;
+    default:
+
+  }
+}
+
 const Portfolio = () => {
-  
+  const [openId, setOpenId] = useState(null);
+
+  const toggleProcess = (id) => {
+    setOpenId(openId === id ? null : id);
+  };
 
   return (
     <section id='portfolio'>
@@ -45,26 +66,46 @@ const Portfolio = () => {
 
       <div className="container portfolio_container">
         {
-          data.map(({ id, image,badge,  title, description, github, demo }) => {
+          data.map(({ id, image, badge, title, description, github, demo }) => {
             return (
-              <article key={id} className='portfolio_item'>
-                <div className="portfolio_item-image">
-                  <img src={image} alt={title} />
-                </div>
-                <div className='badge'>
-                  <div>{badge}</div>
-                </div>
-                <h3>{title}</h3>
-                <small>{description}</small>
-                <div className="portfolio_item-cta">
-                  <a href={github} className={github === null ? 'btn btn-disabled' : 'btn' } target="_blank"  >Github</a>
-                  <a href={demo} className={demo === null ? 'btn btn-primary-disabled' : 'btn btn-primary' } target="_blank" disabled ={demo === 'none' ? true : false }>Live Demo</a>
-                </div>
-              </article>
+              <div className="">
+                <article key={id} className='portfolio_item'>
+                  <div className='portfolio-item-top'>
+                    <div className="portfolio_item-image">
+                      <img src={image} alt={title}  />
+                    </div>
+                    <div className='badge'>
+                      <div>{badge}</div>
+                    </div>
+                    <h3>{title}</h3>
+                    <small>{description}</small>
+                    <div className="portfolio_item-cta">
+                      <a href={github} className={github === null ? 'btn btn-disabled' : 'btn'} target="_blank"  >Github</a>
+                      <a href={demo} className={demo === null ? 'btn btn-primary-disabled' : 'btn btn-primary'} target="_blank" disabled={demo === 'none' ? true : false}>Live Demo</a>
+                    </div>
+                  </div>
+                  <div className="process">
+                    <button className='process-btn' target="_blank" onClick={() => toggleProcess(id)}>
+                      Work Process
+                      <div className="process-btn-icon">
+                        <IoIosArrowDown />
+                      </div>
+                    </button>
+
+                  </div>
+                </article>
+               
+              </div>
+
             )
           })
         }
       </div>
+      {openId != null && (
+                  <div className="work-process-section">
+                    < ProcessHandler id={openId} />
+                  </div>
+                )}
     </section>
   )
 }
