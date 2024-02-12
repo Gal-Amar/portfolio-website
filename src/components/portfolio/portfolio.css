@@ -3,9 +3,8 @@
 .portfolio_container {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  grid-template-rows: 3fr;
   gap: 0.8rem;
-  justify-content: center;
+
 }
 
 #portfolio {
@@ -80,7 +79,7 @@
   font-weight: 600;
   cursor: pointer;
   font-size: medium;
-  
+  width: 100%;
 }
 .process-btn-icon {
  display: grid;
@@ -100,10 +99,13 @@
   cursor: not-allowed;
 }
 
+
 .work-process-section {
   margin-top:2rem ;
-  max-width: 90rem ;
-  width: 110%;
+  display: grid;
+  justify-items: center;
+  width: 105%;
+
 }
 
 /* ==================== WORK PROCESS ====================== */
@@ -116,8 +118,7 @@
 }
 
 .process-headline {
-  display: grid;
-  justify-content: center;
+  text-align: center;
   color: var(--color-primary);
 }
 
@@ -212,7 +213,7 @@
   }
 
   .work-process-section{
-    width: 130%;
+    width: 80%;
   }
 
 }
@@ -229,14 +230,17 @@
   .section-one-des,.section-two-des {
    font-size: larger;
   }
+  .small-devices {
+    display: none;
+  }
 }
 /* ==================== MEDIA QUERIS (MEDIUM-LARGE DEVICES) ====================== */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .portfolio_item-image img{
-    height: 175px;
+    height: 15rem;
   }
- 
+
 }
 
 
@@ -276,6 +280,20 @@
  .donkey-pic-3 {
   width: 20rem;
  }
+
+
+ .check {
+ display: grid;
+ justify-items: center;
+
+ }
+ .large-devices {
+  display: none;
+}
+.small-devices {
+  width: 130%;
+}
+
 }
 
 /* ==================== MEDIA QUERIS (SMALL DEVICES) ====================== */
@@ -292,8 +310,7 @@
   }
   .process-content-section-two {
     grid-template-columns:  1fr;
-    width: fit-content;
-
+    justify-items: center;
   }
    .project-logo-donkey {
     display: grid;
@@ -308,7 +325,8 @@
   .project-image, .arrow-p {
     display: none;
   }
-
+ 
+   
 
 }
 

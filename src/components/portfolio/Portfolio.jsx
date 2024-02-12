@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import "./portfolio.css"
 import { IoIosArrowDown } from "react-icons/io";
 import IMG1 from '../../assets/DonkeyWebPic.jpeg'
@@ -45,7 +45,7 @@ const ProcessHandler = (props) => {
   switch (props.id) {
     case 1: return < ZerliWorkProcess />;
     case 2:
-            return <PortfolioWorkProcess />
+      return <PortfolioWorkProcess />
     case 3:
       return <DonkeyWorkProcess />;
     default:
@@ -55,6 +55,8 @@ const ProcessHandler = (props) => {
 
 const Portfolio = () => {
   const [openId, setOpenId] = useState(null);
+  const workProcessRef = useRef(null);
+
 
   const toggleProcess = (id) => {
     setOpenId(openId === id ? null : id);
@@ -65,15 +67,15 @@ const Portfolio = () => {
       <h4>My Recent Work</h4>
       <h2>Portfolio</h2>
 
-      <div className="container portfolio_container">
+      <div className="container portfolio_container" >
         {
           data.map(({ id, image, badge, title, description, github, demo }) => {
             return (
-              <div className="">
+              <div >
                 <article key={id} className='portfolio_item'>
                   <div className='portfolio-item-top'>
                     <div className="portfolio_item-image">
-                      <img src={image} alt={title}  />
+                      <img src={image} alt={title} />
                     </div>
                     <div className='badge'>
                       <div>{badge}</div>
@@ -92,21 +94,31 @@ const Portfolio = () => {
                         <IoIosArrowDown />
                       </div>
                     </button>
-                
+
                   </div>
                 </article>
-                
+                <div className="check">
+                  <div className="small-devices">
+                    {openId === id && (
+                      <div className="work-process-section">
+                        < ProcessHandler id={openId} />
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
 
             )
-          })
+          }
+          )
+
         }
       </div>
       {openId != null && (
-                  <div className="work-process-section">
-                    < ProcessHandler id={openId} />
-                  </div>
-                )}
+        <div className="work-process-section large-devices">
+          < ProcessHandler id={openId} />
+        </div>
+      )}
     </section>
   )
 }

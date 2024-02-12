@@ -46,15 +46,13 @@ const DonkeyWorkProcess = () => {
         </div>
       </div>
       <div className="process-content-section-two">
-        <div className="section-one-des" style={{alignItems:'center'}}>
+        <div className="section-two-des" style={{alignItems:'center'}}>
           <p style={{display: 'grid', justifyItems: 'center'}}>
           <IoConstruct size={55}/> <br /><br/>
           The website is still a work in progress   <br /> and currently looks like this 
           <br />
           <p className='arrow-p'><FaLongArrowAltRight size={20}/><FaLongArrowAltRight size={20}/><FaLongArrowAltRight size={20}/></p>
           </p>
-         
-
         </div>
         <div className="project-donkey-image">
           <img className="donkey-pic-3" src={donkey3} ></img>
