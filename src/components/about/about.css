@@ -87,9 +87,8 @@
   .about_content{
     min-width: 36rem;
   }
-  .container.about_me_p {
+ .about_me_p {
     margin-left: 15%;
-    width: 80%;
   }
 }
 

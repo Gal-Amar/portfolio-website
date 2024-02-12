@@ -16,13 +16,13 @@ const ZerliWorkProcess = () => {
   return (
     <div className="container process_container">
       <div className="process-headline">
-        <h1 className="">Zerli-Project</h1>
+        <h1 className="">Zerli Project</h1>
       </div>
       <div className="process-content-section-one">
 
-        <div className="project-logo">
+        <div>
           <img src={zerliLogo} className='zerli-logo' />
-          <div className='logo-description'>
+          <div className='logo-description' style={{color: '#7b415f' , backgroundColor: '#eee5e9', border: ' 1px solid #7b415f'}}>
             <p >We planed our logo and decided on the color theme of the project</p>
           </div>
         </div>
@@ -33,8 +33,8 @@ const ZerliWorkProcess = () => {
             phase, we planned, drew up diagrams, and divided the
             workload among team members.
           </p>
-          <a href='https://github.com/Gal-Amar/Zerli/tree/main/UML%20Diagrams' className='uml-link' target='_blank'>
-            you can see here all the UML Diagrams of the project &nbsp;
+          <a href='https://github.com/Gal-Amar/Zerli/tree/main/UML%20Diagrams'  target='_blank'>
+           you can see here all the UML Diagrams of the project &nbsp;
             <SiUml size={20} />
           </a>
         </div>
@@ -48,13 +48,13 @@ const ZerliWorkProcess = () => {
             to each team member. Personally, I was in charge of the Order section and the creation of reports.
           </p>
         </div>
-        <div className="project-video">
+        <div>
           <img className="project-image" src={zerli1} ></img>
         </div>
       </div>
       <div className="process-content-section-one">
         <div className="project-video">
-          <video onClick={() => setMutedOrderVideo(!mutedOrderVideo)} src={zerliOrders} loop autoplay={"autoplay"} muted={mutedOrderVideo} className='first-video'>
+          <video onClick={() => setMutedOrderVideo(!mutedOrderVideo)} src={zerliOrders} loop autoplay={"autoplay"} muted={mutedOrderVideo} className='project-video' >
           </video>
         </div>
         <div className="section-one-des">
@@ -67,7 +67,7 @@ const ZerliWorkProcess = () => {
         </div>
       </div>
       <div className="process-content-section-two">
-        <div className="container section-two-des">
+        <div className="section-two-des">
           <p>
           In the 'Report' section, we designed a system that generates reports for different time periods, mainly monthly and yearly. 
           These reports are automatically converted into PDF format and saved in the database. Access to these reports is limited to 
@@ -76,7 +76,7 @@ const ZerliWorkProcess = () => {
           </p>
         </div>
         <div className="project-video">
-          <video onClick={() => setMutedReportsVideo(!mutedReportsVideo)} src={zerliReports} loop autoplay={"autoplay"} muted={mutedReportsVideo} className='second-video' />
+          <video onClick={() => setMutedReportsVideo(!mutedReportsVideo)} src={zerliReports} loop autoplay={"autoplay"} muted={mutedReportsVideo} className='project-video' />
         </div>
       </div>
     </div>

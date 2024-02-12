@@ -6,6 +6,7 @@ import IMG2 from '../../assets/Zerli.jpeg'
 import IMG3 from '../../assets/PortfolioWebPic.jpeg'
 import ZerliWorkProcess from './ZerliWorkProcess'
 import DonkeyWorkProcess from './DonkeyWorkProcess';
+import PortfolioWorkProcess from './PortfolioWorkProcess';
 
 const data = [
   {
@@ -44,7 +45,7 @@ const ProcessHandler = (props) => {
   switch (props.id) {
     case 1: return < ZerliWorkProcess />;
     case 2:
-
+            return <PortfolioWorkProcess />
     case 3:
       return <DonkeyWorkProcess />;
     default:
@@ -91,10 +92,10 @@ const Portfolio = () => {
                         <IoIosArrowDown />
                       </div>
                     </button>
-
+                
                   </div>
                 </article>
-               
+                
               </div>
 
             )
