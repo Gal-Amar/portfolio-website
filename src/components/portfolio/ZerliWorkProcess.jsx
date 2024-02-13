@@ -51,7 +51,7 @@ const ZerliWorkProcess = () => {
       </div>
       <div className="process-content-section-one">
         <div className="project-video">
-          <video src={zerliOrders} controlsList='nofullscreen' loop autoplay={"autoplay"} muted="true" className='project-video' >
+          <video src={zerliOrders} controlsList='nofullscreen' playsInline loop autoplay muted className='project-video' >
           </video>
         </div>
         <div className="section-one-des">
@@ -73,7 +73,7 @@ const ZerliWorkProcess = () => {
           </p>
         </div>
         <div className="project-video">
-          <video src={zerliReports} controlsList='nofullscreen' loop autoplay={"autoplay"} muted='true' className='project-video' />
+          <video src={zerliReports} controlsList='nofullscreen' playsInline loop autoplay muted className='project-video' />
         </div>
       </div>
     </div>
