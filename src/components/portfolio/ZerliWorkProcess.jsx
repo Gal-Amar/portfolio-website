@@ -3,7 +3,7 @@ import zerli1 from '../../assets/Zerli_image1.jpeg'
 
 import { SiUml } from "react-icons/si";
 import zerliOrders from '../../assets/zerli_orders.mp4';
-import zerliReports from '../../assets/zerli-reports.mp4';
+import zerliReports from '../../assets/zerli_reports.mp4';
 
 
 
