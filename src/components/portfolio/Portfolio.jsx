@@ -55,7 +55,6 @@ const ProcessHandler = (props) => {
 
 const Portfolio = () => {
   const [openId, setOpenId] = useState(null);
-  const workProcessRef = useRef(null);
 
 
   const toggleProcess = (id) => {
@@ -97,7 +96,7 @@ const Portfolio = () => {
 
                   </div>
                 </article>
-                <div className="check">
+                <div >
                   <div className="small-devices">
                     {openId === id && (
                       <div className="work-process-section">

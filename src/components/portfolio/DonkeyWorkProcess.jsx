@@ -13,7 +13,7 @@ const DonkeyWorkProcess = () => {
  
 
   return (
-    <div className="container process_container">
+    <div className="process_container">
       <div className="process-headline">
         <h1>Donkey & Friends Project</h1>
       </div>

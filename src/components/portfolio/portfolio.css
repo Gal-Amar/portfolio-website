@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+
 .portfolio_container {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 0.8rem;
+  justify-items: center;
 
 }
 
 #portfolio {
-  display: grid;
-  justify-items: center;
+ margin: 0;
 }
 .portfolio_item {
   display: grid;
@@ -254,10 +255,12 @@
  }
  .portfolio_container {
     grid-template-columns:  1fr;
-    gap: 1rem;   
+    gap: 1rem;  
+    width: 50%;
   }
   .work-process-section{
     width: 100%;
+    
   }
  
   .process-content-section-one {
@@ -281,17 +284,8 @@
   width: 20rem;
  }
 
-
- .check {
- display: grid;
- justify-items: center;
-
- }
  .large-devices {
   display: none;
-}
-.small-devices {
-  width: 130%;
 }
 
 }
@@ -299,10 +293,10 @@
 /* ==================== MEDIA QUERIS (SMALL DEVICES) ====================== */
 
 @media screen and (max-width: 800px) {
-  
-  .portfolio_container {
-    max-width: 70%;
-  }
+  .container.portfolio_container {
+    width:auto;
+ }
+
 
   .process-content-section-one {
     grid-template-columns: 1fr;
@@ -324,20 +318,7 @@
 
   .project-image, .arrow-p {
     display: none;
-  }
- 
-   
+  }   
 
 }
 
-/* ==================== MEDIA QUERIS (SMALL DEVICES) ====================== */
-
-@media screen and (max-width: 600px) { 
-  
-  .portfolio_container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    
-  }
- 
-}

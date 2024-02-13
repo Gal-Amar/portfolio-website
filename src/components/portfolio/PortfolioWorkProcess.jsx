@@ -10,7 +10,7 @@ import portfolio from '../../assets/portfolio.jpeg'
 const PortfolioWorkProcess = () => {
 
   return (
-    <div className="container process_container">
+    <div className=" process_container">
       <div className="process-headline">
         <h1 className="">Portfolio Web Project</h1>
       </div>

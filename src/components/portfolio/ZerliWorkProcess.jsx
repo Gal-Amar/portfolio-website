@@ -14,7 +14,7 @@ const ZerliWorkProcess = () => {
 
 
   return (
-    <div className="container process_container">
+    <div className="process_container">
       <div className="process-headline">
         <h1 className="">Zerli Project</h1>
       </div>
