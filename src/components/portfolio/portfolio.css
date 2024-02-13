@@ -314,6 +314,10 @@
     display: none;
   }
 
+  .project-video {
+    width: 20rem;
+  }
+
 }
 
 /* ==================== MEDIA QUERIS (SMALL DEVICES) ====================== */
@@ -339,7 +343,7 @@
   }
 
   .project-video {
-    width: 14rem;
+    width: 20rem;
   }
   .me-image {
     width: 10rem;

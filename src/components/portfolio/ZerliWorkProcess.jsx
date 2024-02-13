@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import zerliLogo from '../../assets/logoZerli.png'
 import zerli1 from '../../assets/Zerli_image1.jpeg'
 
@@ -9,8 +8,6 @@ import zerliReports from '../../assets/zerli-reports.mp4';
 
 
 const ZerliWorkProcess = () => {
-  const [mutedOrderVideo, setMutedOrderVideo] = useState(true);
-  const [mutedReportsVideo, setMutedReportsVideo] = useState(true);
 
 
   return (
@@ -54,7 +51,7 @@ const ZerliWorkProcess = () => {
       </div>
       <div className="process-content-section-one">
         <div className="project-video">
-          <video onClick={() => setMutedOrderVideo(!mutedOrderVideo)} src={zerliOrders} loop autoplay={"autoplay"} muted={mutedOrderVideo} className='project-video' >
+          <video src={zerliOrders} controlsList='nofullscreen' loop autoplay={"autoplay"} muted="true" className='project-video' >
           </video>
         </div>
         <div className="section-one-des">
@@ -76,7 +73,7 @@ const ZerliWorkProcess = () => {
           </p>
         </div>
         <div className="project-video">
-          <video onClick={() => setMutedReportsVideo(!mutedReportsVideo)} src={zerliReports} loop autoplay={"autoplay"} muted={mutedReportsVideo} className='project-video' />
+          <video src={zerliReports} controlsList='nofullscreen' loop autoplay={"autoplay"} muted='true' className='project-video' />
         </div>
       </div>
     </div>

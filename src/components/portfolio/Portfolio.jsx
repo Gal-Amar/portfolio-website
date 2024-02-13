@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 import "./portfolio.css"
 import { IoIosArrowDown } from "react-icons/io";
 import IMG1 from '../../assets/DonkeyWebPic.jpeg'
