@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-
+.container.portfolio_container {
+  width: 90%;
+}
 .portfolio_container {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.8rem;
-  justify-items: center;
-
 }
 
 #portfolio {
- margin: 0;
+  display: grid;
+  justify-items: center;
 }
+
 .portfolio_item {
   display: grid;
   grid-template-rows: 2fr 2.8rem;
@@ -20,7 +22,8 @@
   border: 1px solid transparent;
   transition: var(--transition);
 }
-.portfolio-item-top{
+
+.portfolio-item-top {
   padding: 1rem;
 }
 
@@ -45,7 +48,7 @@
   border: 1px solid var(--color-bg);
   border-radius: 1rem;
   color: var(--bg-white);
-  background-color:  var(--color-bg);
+  background-color: var(--color-bg);
 }
 
 .portfolio_item small {
@@ -57,7 +60,7 @@
 .portfolio_item-cta {
   display: flex;
   gap: 1rem;
-  margin: 2rem 0 1rem;  
+  margin: 2rem 0 1rem;
 }
 
 .process {
@@ -74,17 +77,19 @@
   border-bottom-left-radius: 2rem;
   transition: var(--transition);
 }
+
 .process-btn {
-  color:  var(--color-bg);
+  color: var(--color-bg);
   background-color: transparent;
   font-weight: 600;
   cursor: pointer;
   font-size: medium;
   width: 100%;
 }
+
 .process-btn-icon {
- display: grid;
- justify-content: center; 
+  display: grid;
+  justify-content: center;
 }
 
 
@@ -102,10 +107,10 @@
 
 
 .work-process-section {
-  margin-top:2rem ;
+  margin-top: 2rem;
   display: grid;
   justify-items: center;
-  width: 105%;
+  width: 90%;
 
 }
 
@@ -125,27 +130,29 @@
 
 .process-content-section-one {
   display: grid;
-  grid-template-columns: 1fr 2fr; 
+  grid-template-columns: 1fr 2fr;
   gap: 1rem;
-  justify-items:baseline;
+  justify-items: baseline;
   margin-top: 2rem;
   align-items: center;
 }
-.section-one-des, .section-two-des
-{
+
+.section-one-des,
+.section-two-des {
   margin: 1rem 0 0 2rem;
 }
 
 .process-content-section-two {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: 2fr 1fr; 
+  grid-template-columns: 2fr 1fr;
   gap: 2rem;
   align-items: center;
   justify-items: center;
 }
 
-.project-image,.portfolio-image {
+.project-image,
+.portfolio-image {
   width: 20rem;
   margin-top: 1rem;
   transform: rotate(1.5deg);
@@ -156,19 +163,19 @@
 .logo-description {
   font-weight: 400;
   border-radius: 1.5rem;
-  padding: 0.5rem ;
+  padding: 0.5rem;
   text-align: center;
 }
 
-.zerli-logo{
+.zerli-logo {
   width: 12rem;
 }
 
-.portfolio-logo {
+.me-image {
   width: 12rem;
   margin-left: 2rem;
   object-fit: contain;
-  background: linear-gradient(var(--color-primary),transparent);
+  background: linear-gradient(var(--color-primary), transparent);
   border-radius: 12rem;
   overflow: hidden;
 }
@@ -183,10 +190,12 @@
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 
 }
+
 .pic-2 {
   margin-left: 5rem;
   height: 11rem;
 }
+
 .donkey-pic-3 {
   border-radius: 1rem;
   width: 15rem;
@@ -199,7 +208,7 @@
   justify-content: center;
 }
 
-.project-video{
+.project-video {
   width: 25rem;
   border-radius: 1rem;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
@@ -208,37 +217,46 @@
 /* ==================== MEDIA QUERIS (VERY LARGE DEVICES) ====================== */
 
 @media screen and (min-width: 2040px) {
-  .process_container { 
+  .container.portfolio_container {
+    width: 70%;
+  }
+  .process_container {
     margin: 1.5rem 0;
     text-align: center;
   }
 
-  .work-process-section{
+  .work-process-section {
     width: 80%;
   }
 
 }
+
 /* ==================== MEDIA QUERIS (LARGE DEVICES) ====================== */
 
 @media screen and (min-width: 1024px) {
- 
+  
   .donkey-pic {
     width: 65%;
   }
-  .donkey-pic-3{
+
+  .donkey-pic-3 {
     width: 25rem;
   }
-  .section-one-des,.section-two-des {
-   font-size: larger;
+
+  .section-one-des,
+  .section-two-des {
+    font-size: larger;
   }
+
   .small-devices {
     display: none;
   }
 }
+
 /* ==================== MEDIA QUERIS (MEDIUM-LARGE DEVICES) ====================== */
 
 @media screen and (min-width: 800px) {
-  .portfolio_item-image img{
+  .portfolio_item-image img {
     height: 15rem;
   }
 
@@ -250,43 +268,51 @@
 
 @media screen and (max-width: 1024px) {
 
- .container.portfolio_container {
+  .container.portfolio_container {
     width: 60%;
- }
- .portfolio_container {
-    grid-template-columns:  1fr;
-    gap: 1rem;  
-    width: 50%;
   }
-  .work-process-section{
-    width: 100%;
-    
+
+  .portfolio_container {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    justify-items: center;
+    /* width: 50%; */
   }
- 
+
+  .work-process-section {
+    width: 110%;
+  }
+
   .process-content-section-one {
     grid-template-columns: 1fr 1fr;
   }
+
   .process-content-section-two {
     grid-template-columns: 1fr 1fr;
 
   }
+
   .logo-description {
     bottom: 1rem;
     left: 20%;
   }
-  .section-two-des,.section-one-des, .first-video, .second-video  {
+
+  .section-two-des,
+  .section-one-des,
+  .first-video,
+  .second-video {
     margin: 1.5rem 0;
     width: 100%;
     text-align: center;
   }
 
- .donkey-pic-3 {
-  width: 20rem;
- }
+  .donkey-pic-3 {
+    width: 20rem;
+  }
 
- .large-devices {
-  display: none;
-}
+  .large-devices {
+    display: none;
+  }
 
 }
 
@@ -294,31 +320,62 @@
 
 @media screen and (max-width: 800px) {
   .container.portfolio_container {
-    width:auto;
- }
+    width: auto;
+    margin:0 1rem;
+    justify-items: center;
+  }
+  /* .work-process-section {
 
-
+    width: 90%;
+  } */
   .process-content-section-one {
     grid-template-columns: 1fr;
     justify-items: center;
   }
+
   .process-content-section-two {
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
     justify-items: center;
   }
-   .project-logo-donkey {
+
+  .project-video {
+    width: 14rem;
+  }
+  .me-image {
+    width: 10rem;
+    margin-left: 0;
+  }
+
+  .portfolio-image {
+    width: 14rem;
+    
+  }
+
+  .donkey-logo {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     align-items: center;
-    gap: 1rem;
+    width: 12rem;
+  }
+  .donkey-pic {
+    margin-left: -1rem;
   }
   .pic-2 {
     margin: 0;
+    margin: 1rem;
+  }
+  
+  .donkey-pic-3 {
+    width: 14rem;
   }
 
-  .project-image, .arrow-p {
+  .project-image,
+  .arrow-p {
     display: none;
-  }   
+  }
+
+  .small-devices {
+    width: 90%;
+  }
 
 }
-

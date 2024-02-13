@@ -50,7 +50,7 @@ body {
 /* =================== GENERAL STYLES ================== */
 
 .container {
-  width: var(--container-width-md);
+  width: var(--container-width-lg);
   margin: 0 auto;
 }
 

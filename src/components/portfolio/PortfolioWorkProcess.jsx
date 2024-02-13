@@ -16,7 +16,7 @@ const PortfolioWorkProcess = () => {
       </div>
       <div className="process-content-section-one">
         <div>
-          <img src={me} className='portfolio-logo' />
+          <img src={me} className='me-image' />
         </div>
         <div className="section-one-des">
           <p>
