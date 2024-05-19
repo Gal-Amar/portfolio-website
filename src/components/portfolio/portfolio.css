@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 .container.portfolio_container {
   width: 90%;
@@ -6,7 +6,7 @@
 .portfolio_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 #portfolio {
@@ -21,6 +21,7 @@
   border-radius: 2rem;
   border: 1px solid transparent;
   transition: var(--transition);
+  height: 535px;
 }
 
 .portfolio-item-top {
@@ -52,7 +53,7 @@
 }
 
 .portfolio_item small {
-  font-size: 0.85rem;
+  font-size: medium;
   font-weight: 500;
   color: var(--color-primary);
 }
@@ -92,7 +93,6 @@
   justify-content: center;
 }
 
-
 .btn.btn-disabled:hover {
   background-color: transparent;
   color: var(--bg-white);
@@ -105,13 +105,11 @@
   cursor: not-allowed;
 }
 
-
 .work-process-section {
   margin-top: 2rem;
   display: grid;
   justify-items: center;
   width: 90%;
-
 }
 
 /* ==================== WORK PROCESS ====================== */
@@ -141,6 +139,10 @@
 .section-two-des {
   margin: 1rem 0 0 2rem;
 }
+.section-one-des a {
+  display: flex;
+  align-items: center;
+}
 
 .process-content-section-two {
   margin-top: 2rem;
@@ -150,14 +152,19 @@
   align-items: center;
   justify-items: center;
 }
-
+.image:hover {
+  transition: transform 0.25s ease;
+  transform: scale(1.5);
+  transform-origin: 40% 20%;
+}
 .project-image,
 .portfolio-image {
   width: 20rem;
   margin-top: 1rem;
   transform: rotate(1.5deg);
   border-radius: 1rem;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .logo-description {
@@ -187,8 +194,8 @@
 .donkey-pic {
   width: 12rem;
   border-radius: 1rem;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .pic-2 {
@@ -211,15 +218,16 @@
 .project-video {
   width: 25rem;
   border-radius: 1rem;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 /* ==================== MEDIA QUERIS (VERY LARGE DEVICES) ====================== */
 
 @media screen and (min-width: 2040px) {
-  .container.portfolio_container {
+  /* .container.portfolio_container {
     width: 70%;
-  }
+  } */
   .process_container {
     margin: 1.5rem 0;
     text-align: center;
@@ -228,13 +236,11 @@
   .work-process-section {
     width: 80%;
   }
-
 }
 
-/* ==================== MEDIA QUERIS (LARGE DEVICES) ====================== */
+/* ==================== MEDIA QUERIES (LARGE DEVICES) ====================== */
 
 @media screen and (min-width: 1024px) {
-  
   .donkey-pic {
     width: 65%;
   }
@@ -247,10 +253,6 @@
   .section-two-des {
     font-size: larger;
   }
-
-  .small-devices {
-    display: none;
-  }
 }
 
 /* ==================== MEDIA QUERIS (MEDIUM-LARGE DEVICES) ====================== */
@@ -259,28 +261,16 @@
   .portfolio_item-image img {
     height: 15rem;
   }
-
+  .small-devices {
+    display: none;
+  }
 }
 
-
-
-/* ==================== MEDIA QUERIS (MEDIUM DEVICES) ====================== */
+/* ==================== MEDIA QUERIES (MEDIUM DEVICES) ====================== */
 
 @media screen and (max-width: 1024px) {
-
   .container.portfolio_container {
-    width: 60%;
-  }
-
-  .portfolio_container {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-    justify-items: center;
-    /* width: 50%; */
-  }
-
-  .work-process-section {
-    width: 110%;
+    width: 95%;
   }
 
   .process-content-section-one {
@@ -289,7 +279,6 @@
 
   .process-content-section-two {
     grid-template-columns: 1fr 1fr;
-
   }
 
   .logo-description {
@@ -310,28 +299,31 @@
     width: 20rem;
   }
 
-  .large-devices {
-    display: none;
-  }
-
   .project-video {
     width: 20rem;
   }
-
 }
 
-/* ==================== MEDIA QUERIS (SMALL DEVICES) ====================== */
+/* ==================== MEDIA QUERIES (SMALL DEVICES) ====================== */
 
 @media screen and (max-width: 800px) {
+  .portfolio_container {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    justify-items: center;
+    width: 90%;
+  }
   .container.portfolio_container {
-    width: auto;
-    margin:0 1rem;
+    /* width: auto; */
+    margin: 0 1rem;
     justify-items: center;
   }
-  /* .work-process-section {
-
-    width: 90%;
-  } */
+  .portfolio_item {
+    height: auto;
+  }
+  .work-process-section {
+    width: 110%;
+  }
   .process-content-section-one {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -352,7 +344,6 @@
 
   .portfolio-image {
     width: 14rem;
-    
   }
 
   .donkey-logo {
@@ -368,7 +359,7 @@
     margin: 0;
     margin: 1rem;
   }
-  
+
   .donkey-pic-3 {
     width: 14rem;
   }
@@ -382,4 +373,7 @@
     width: 90%;
   }
 
+  .large-devices {
+    display: none;
+  }
 }
