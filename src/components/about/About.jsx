@@ -1,63 +1,66 @@
-import React from 'react'
-import "./about.css"
-import ME from '../../assets/myPic2.JPEG'
-import { FaAward } from 'react-icons/fa'
-import { BiBadgeCheck } from 'react-icons/bi'
-import { RiFoldersFill } from 'react-icons/ri'
+import React from "react";
+import "./about.css";
+import ME from "../../assets/myPic2.JPEG";
+import { FaAward } from "react-icons/fa";
+import { BiBadgeCheck } from "react-icons/bi";
+import { RiFoldersFill } from "react-icons/ri";
 
 const About = () => {
   return (
-    <section id='about'>
+    <section id="about">
       <h4>Get To Know</h4>
       <h2>About Me</h2>
-      <div className='container about_container'>
+      <div className="container about_container">
         <div className="about_me">
           <div className="about_me-image">
-            <img src={ME} alt='About Image'></img>
+            <img src={ME} alt="About Image"></img>
           </div>
         </div>
         <div className="about_content">
           <div className="about_cards">
-            <article className='about_card'>
-              <FaAward className='about_icon' />
+            <article className="about_card">
+              <FaAward className="about_icon" />
               <h4>GPA</h4>
-              <small>84</small>
+              <small>85</small>
             </article>
 
-            <article className='about_card'>
-              <BiBadgeCheck className='about_icon' />
+            <article className="about_card">
+              <BiBadgeCheck className="about_icon" />
               <h4>2nd Place</h4>
-              <small>Hackathon for the Elderly</small>
+              <small>Hackathon at Skai</small>
             </article>
-
-            <article className='about_card'>
-              <RiFoldersFill className='about_icon' />
-              <h4>Projects</h4>
-              <small>2 Completed, 2 in Progress</small>
+            <article className="about_card">
+              <BiBadgeCheck className="about_icon" />
+              <h4>2nd Place</h4>
+              <small>Hackathon for the Elderly by Joint Eshel</small>
             </article>
           </div>
-
         </div>
-
       </div>
       <div className="container about_me_p">
         <p>
-        I'm Gal Amar, a junior software engeneer and I'm excited to begin my career as a
-        software developer. My journey began with working as a phone technician at John Bryce
-        followed by two years in security work at Israel Railways. 
-        During my time as a Security Guard and Baggage Screener, I sharpened my sense of
-        responsibility and attention to detail.
+          I'm Gal Amar, a Junior Software Engineer with a B.Sc. in Computer
+          Software Engineering. I have experience in full-stack development,
+          using React, JavaScript, Java, and SQL/MongoDB. I'm skilled in CI/CD
+          environments, OOP, and API testing.
         </p>
         <p>
-        Beyond work and studies, I'm passionate about sports, TV series, and enjoying quality time
-        with friends. Currently, my main goal is transitioning into software engineering, leveraging
-        my solid skills in Java, C, and web development. I work well in team, love assisting colleagues,
-        and excel in self-driven learning and accountability
+          I’m passionate about building user-centric solutions and am eager to
+          continue growing my skills in software engineering. I thrive in
+          collaborative environments, and I’m committed to making a meaningful
+          impact with my work.
         </p>
-        <a href='#contact' className='btn btn-primary'>Let's Talk</a>
+        <p>
+          I'm currently seeking a junior software engineering role to apply my
+          skills and contribute to innovative projects. Outside of work, I enjoy
+          sports, TV series, and spending time with friends.
+        </p>
+        <a href="#contact" className="btn btn-primary">
+          Let's Talk
+        </a>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
