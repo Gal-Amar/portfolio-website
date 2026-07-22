@@ -5,7 +5,7 @@ import { FaFacebookF } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer>
-      <a href={"#"} className="footer_logo">
+      <a href={"#home"} className="footer_logo">
         Gal Amar
       </a>
 
