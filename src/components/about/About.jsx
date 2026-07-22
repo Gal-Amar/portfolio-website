@@ -39,21 +39,23 @@ const About = () => {
       </div>
       <div className="container about_me_p">
         <p>
-          I'm Gal Amar, a Junior Software Engineer with a B.Sc. in Computer
-          Software Engineering. I have experience in full-stack development,
-          using React, JavaScript, Java, and SQL/MongoDB. I'm skilled in CI/CD
-          environments, OOP, and API testing.
+          I'm Gal Amar, a Software Engineer and Technical Mentor with a B.Sc. in
+          Software Engineering. After being affected by layoffs early in my
+          career, I joined the training program at Infinity Labs R&amp;D to
+          strengthen my technical skills and rebuild my confidence.
         </p>
+
         <p>
-          I’m passionate about building user-centric solutions and am eager to
-          continue growing my skills in software engineering. I thrive in
-          collaborative environments, and I’m committed to making a meaningful
-          impact with my work.
+          After completing the program, I was offered the opportunity to stay
+          and work alongside my mentors. Today, I develop software with Go and
+          React Native and mentor students in C++ as part of the AI Software
+          Engineer training program.
         </p>
+
         <p>
-          I'm currently seeking a junior software engineering role to apply my
-          skills and contribute to innovative projects. Outside of work, I enjoy
-          sports, TV series, and spending time with friends.
+          I also have experience in full-stack development, backend systems,
+          REST APIs, CI/CD, testing, and debugging. I enjoy solving technical
+          problems, learning new technologies, and helping others grow.
         </p>
         <a href="#contact" className="btn btn-primary">
           Let's Talk
