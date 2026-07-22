@@ -3,7 +3,6 @@ import "./about.css";
 import ME from "../../assets/myPic2.JPEG";
 import { FaAward } from "react-icons/fa";
 import { BiBadgeCheck } from "react-icons/bi";
-import { RiFoldersFill } from "react-icons/ri";
 
 const About = () => {
   return (
@@ -13,7 +12,7 @@ const About = () => {
       <div className="container about_container">
         <div className="about_me">
           <div className="about_me-image">
-            <img src={ME} alt="About Image"></img>
+            <img src={ME} alt="About"></img>
           </div>
         </div>
         <div className="about_content">

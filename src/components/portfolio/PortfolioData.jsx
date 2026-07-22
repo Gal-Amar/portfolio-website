@@ -45,6 +45,7 @@ const PortfolioData = (props) => {
                   <button
                     className="process-btn"
                     target="_blank"
+                    rel="noreferrer"
                     onClick={() => props.toggleProcess(id)}
                   >
                     Work Process
